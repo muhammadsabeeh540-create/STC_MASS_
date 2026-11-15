@@ -1,0 +1,879 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta name="theme-color" content="#090b10" />
+
+  <meta
+    name="description"
+    content="STORM WATCH: Jezero Outpost — an interactive Mars survival experience. Manage power, oxygen, radiation shielding and crew health across a 30-day mission."
+  />
+
+  <meta name="application-name" content="STORM WATCH" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="STORM WATCH | Jezero Outpost" />
+  <meta
+    property="og:description"
+    content="Keep a crew alive on Mars for 30 days. Every choice costs something."
+  />
+
+  <title>STORM WATCH — Jezero Outpost</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/src/style.css" />
+
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <div id="app">
+
+    <!-- =========================================
+         GLOBAL HEADER
+    ========================================== -->
+
+    <header class="site-header" id="site-header">
+      <div class="header-inner">
+
+        <a
+          class="brand"
+          href="#home"
+          aria-label="Storm Watch home"
+        >
+          <span class="brand-symbol" aria-hidden="true">SW</span>
+
+          <span class="brand-copy">
+            <strong>STORM WATCH</strong>
+            <small>JEZERO OUTPOST</small>
+          </span>
+        </a>
+
+        <button
+          class="mobile-menu-toggle"
+          id="mobile-menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#problem" class="nav-link">The Challenge</a>
+          <a href="#colony" class="nav-link">Colony</a>
+          <a href="#data" class="nav-link">NASA Data</a>
+          <a href="#game" class="nav-link">Play Mission</a>
+          <a href="#mission-control" class="nav-link">Mission Control</a>
+        </nav>
+
+        <div class="header-actions">
+          <span class="archive-indicator">
+            <span class="status-dot"></span>
+            ARCHIVED DATA
+          </span>
+
+          <button
+            class="settings-button"
+            id="open-settings"
+            type="button"
+            aria-label="Open settings"
+          >
+            <span aria-hidden="true">⚙</span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+
+    <!-- =========================================
+         MAIN APPLICATION
+    ========================================== -->
+
+    <main id="main-content">
+
+      <!-- HOME -->
+
+      <section
+        class="page-section hero-section"
+        id="home"
+        aria-labelledby="hero-title"
+      >
+        <div class="hero-background" aria-hidden="true">
+          <div class="hero-grid"></div>
+          <div class="hero-glow"></div>
+        </div>
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            MARS SURVIVAL PROGRAM
+            <span class="eyebrow-divider">/</span>
+            MISSION 001
+          </div>
+
+          <h1 id="hero-title">
+            STORM
+            <span>WATCH</span>
+          </h1>
+
+          <p class="hero-location">
+            JEZERO OUTPOST
+            <span>—</span>
+            MARS
+          </p>
+
+          <p class="hero-description">
+            Keep a crew alive on Mars for 30 days.
+            Every choice costs something.
+            The space weather is real NASA data.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#game" class="button button-primary">
+              <span>Launch Mission</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a href="#problem" class="button button-secondary">
+              Explore the Project
+            </a>
+          </div>
+
+          <div class="hero-facts">
+            <div class="hero-fact">
+              <strong>04</strong>
+              <span>ASTRONAUTS</span>
+            </div>
+
+            <div class="hero-fact">
+              <strong>30</strong>
+              <span>MARS DAYS</span>
+            </div>
+
+            <div class="hero-fact">
+              <strong>01</strong>
+              <span>MISSION</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hero-visual" aria-label="Mars outpost preview">
+          <div class="mars-placeholder">
+            <div class="mars-orb"></div>
+            <div class="mars-caption">
+              <span>DESTINATION</span>
+              <strong>JEZERO CRATER</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+          SCROLL TO EXPLORE
+          <span>↓</span>
+        </div>
+      </section>
+
+
+      <!-- PROBLEM AND SOLUTION -->
+
+      <section
+        class="page-section content-section"
+        id="problem"
+        aria-labelledby="problem-title"
+      >
+        <div class="section-heading">
+          <span class="section-kicker">01 / THE CHALLENGE</span>
+
+          <h2 id="problem-title">
+            SURVIVAL IS A
+            <span>CHOICE.</span>
+          </h2>
+
+          <p>
+            Managing a Mars outpost means making difficult decisions
+            with limited resources.
+          </p>
+        </div>
+
+        <div class="problem-grid">
+
+          <article class="information-card">
+            <span class="card-number">01</span>
+            <h3>Limited Power</h3>
+            <p>
+              Solar energy is limited. Every system competes
+              for the same battery.
+            </p>
+          </article>
+
+          <article class="information-card">
+            <span class="card-number">02</span>
+            <h3>Life Support</h3>
+            <p>
+              Oxygen must be maintained every day to keep
+              the crew alive.
+            </p>
+          </article>
+
+          <article class="information-card">
+            <span class="card-number">03</span>
+            <h3>Radiation</h3>
+            <p>
+              Space weather can increase radiation exposure.
+              Shielding uses valuable power.
+            </p>
+          </article>
+
+          <article class="information-card">
+            <span class="card-number">04</span>
+            <h3>Crew Health</h3>
+            <p>
+              Exercise helps protect astronauts from the
+              effects of low gravity.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="solution-panel">
+          <span class="section-kicker">OUR SOLUTION</span>
+
+          <h3>LEARN THROUGH DECISIONS.</h3>
+
+          <p>
+            STORM WATCH is an interactive resource-management
+            survival game where players manage four astronauts
+            through a 30-day mission at Jezero Crater.
+          </p>
+
+          <a href="#game" class="text-link">
+            Experience the mission →
+          </a>
+        </div>
+      </section>
+
+
+      <!-- COLONY EXPLORER -->
+
+      <section
+        class="page-section colony-section"
+        id="colony"
+        aria-labelledby="colony-title"
+      >
+        <div class="section-heading">
+          <span class="section-kicker">02 / EXPLORE MARS</span>
+
+          <h2 id="colony-title">
+            JEZERO
+            <span>OUTPOST.</span>
+          </h2>
+
+          <p>
+            Explore the habitat, power systems and scientific
+            facilities of the Mars colony.
+          </p>
+        </div>
+
+        <div class="colony-interface">
+
+          <aside
+            class="colony-sidebar"
+            aria-label="Colony facility navigation"
+          >
+            <button type="button" data-facility="habitat">
+              Habitat
+            </button>
+
+            <button type="button" data-facility="solar">
+              Solar Array
+            </button>
+
+            <button type="button" data-facility="laboratory">
+              Laboratory
+            </button>
+
+            <button type="button" data-facility="greenhouse">
+              Greenhouse
+            </button>
+
+            <button type="button" data-facility="rover">
+              Rover
+            </button>
+          </aside>
+
+          <div class="colony-scene">
+
+            <div
+              id="colony-canvas"
+              class="colony-canvas"
+              role="img"
+              aria-label="Interactive 3D Mars colony scene"
+            >
+              <div class="colony-fallback">
+                <span>JEZERO OUTPOST</span>
+                <p>3D colony visualization will load here.</p>
+              </div>
+            </div>
+
+            <div class="colony-overlay">
+              <span>LOCATION</span>
+              <strong>JEZERO CRATER, MARS</strong>
+              <span class="archive-indicator">
+                VISUALIZATION
+              </span>
+            </div>
+
+          </div>
+
+          <aside class="facility-information">
+            <span class="section-kicker">FACILITY INFORMATION</span>
+            <h3 id="facility-title">Habitat</h3>
+
+            <p id="facility-description">
+              Main living and crew protection facility.
+            </p>
+
+            <div id="facility-details"></div>
+          </aside>
+
+        </div>
+      </section>
+
+
+      <!-- NASA DATA -->
+
+      <section
+        class="page-section content-section"
+        id="data"
+        aria-labelledby="data-title"
+      >
+        <div class="section-heading">
+          <span class="section-kicker">03 / SCIENTIFIC FOUNDATION</span>
+
+          <h2 id="data-title">
+            BUILT ON
+            <span>NASA DATA.</span>
+          </h2>
+
+          <p>
+            The game uses archived scientific observations
+            and research for educational purposes.
+          </p>
+
+          <div class="archive-badge">
+            ARCHIVED NASA DATA — NOT LIVE
+          </div>
+        </div>
+
+        <div class="data-grid">
+
+          <article class="data-card">
+            <span class="data-label">SPACE WEATHER</span>
+            <h3>NASA DONKI</h3>
+            <p>
+              Solar flares and coronal mass ejections
+              from the archived event timeline.
+            </p>
+            <a
+              href="https://ccmc.gsfc.nasa.gov/tools/DONKI/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore DONKI ↗
+            </a>
+          </article>
+
+          <article class="data-card">
+            <span class="data-label">RADIATION</span>
+            <h3>NASA RadLab</h3>
+            <p>
+              Archived ISS DosTel radiation measurements
+              from April 2022.
+            </p>
+            <a
+              href="https://visualization.osdr.nasa.gov/radlab/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore RadLab ↗
+            </a>
+          </article>
+
+          <article class="data-card">
+            <span class="data-label">SPACE BIOLOGY</span>
+            <h3>NASA OSDR</h3>
+            <p>
+              Research involving mice and rats to understand
+              biological changes in space.
+            </p>
+            <a
+              href="https://osdr.nasa.gov/bio/repo/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore OSDR ↗
+            </a>
+          </article>
+
+        </div>
+
+        <p class="data-honesty-note">
+          Scientific note: Archived ISS radiation measurements
+          are educational reference data, not direct Mars readings.
+          Animal studies are identified as animal studies.
+        </p>
+      </section>
+
+
+      <!-- RESOURCE MANAGEMENT GAME -->
+
+      <section
+        class="page-section game-section"
+        id="game"
+        aria-labelledby="game-title"
+      >
+        <div class="section-heading">
+          <span class="section-kicker">04 / PLAY THE MISSION</span>
+
+          <h2 id="game-title">
+            YOUR CREW.
+            <span>YOUR DECISIONS.</span>
+          </h2>
+
+          <p>
+            Thirty days. Four astronauts. Limited resources.
+            Can you keep everyone alive?
+          </p>
+        </div>
+
+        <div class="game-start-panel" id="game-start-panel">
+
+          <div class="game-introduction">
+            <span class="section-kicker">MISSION BRIEFING</span>
+            <h3>WELCOME TO JEZERO OUTPOST.</h3>
+
+            <p>
+              Your mission is to protect the crew, maintain
+              life support and complete scientific research
+              for 30 Mars days.
+            </p>
+          </div>
+
+          <div class="game-mode-selection">
+
+            <article class="mode-card">
+              <span class="mode-number">MODE 01</span>
+              <h4>Real Storm Mode</h4>
+              <p>
+                Experience the archived NASA space-weather
+                timeline.
+              </p>
+
+              <button
+                class="button button-primary"
+                id="start-real-mission"
+                type="button"
+              >
+                Start Real Mission
+              </button>
+            </article>
+
+            <article class="mode-card">
+              <span class="mode-number">MODE 02</span>
+              <h4>Random Mission</h4>
+              <p>
+                Face a seeded combination of space-weather
+                and dust-storm events.
+              </p>
+
+              <button
+                class="button button-secondary"
+                id="start-random-mission"
+                type="button"
+              >
+                Start Random Mission
+              </button>
+            </article>
+
+          </div>
+
+          <button
+            class="text-button"
+            id="open-how-to-play"
+            type="button"
+          >
+            How to play and understand the rules
+          </button>
+
+        </div>
+
+        <div
+          class="game-dashboard"
+          id="game-dashboard"
+          hidden
+          aria-live="polite"
+        >
+
+          <div class="game-topbar">
+            <div>
+              <span class="section-kicker">ACTIVE MISSION</span>
+              <h3 id="mission-day">DAY 01 / 30</h3>
+            </div>
+
+            <span class="archive-badge">
+              ARCHIVED NASA DATA
+            </span>
+          </div>
+
+          <div class="resource-grid">
+
+            <article class="resource-card">
+              <span>⚡ POWER</span>
+              <strong id="power-value">80</strong>
+              <div class="meter-track">
+                <div id="power-meter" class="meter-fill"></div>
+              </div>
+              <small id="power-status">Safe</small>
+            </article>
+
+            <article class="resource-card">
+              <span>◉ OXYGEN</span>
+              <strong id="oxygen-value">80</strong>
+              <div class="meter-track">
+                <div id="oxygen-meter" class="meter-fill"></div>
+              </div>
+              <small id="oxygen-status">Safe</small>
+            </article>
+
+            <article class="resource-card">
+              <span>♥ CREW HEALTH</span>
+              <strong id="health-value">100</strong>
+              <div class="meter-track">
+                <div id="health-meter" class="meter-fill"></div>
+              </div>
+              <small id="health-status">Safe</small>
+            </article>
+
+            <article class="resource-card">
+              <span>☄ SCIENCE</span>
+              <strong id="science-value">0</strong>
+              <small>Research points</small>
+            </article>
+
+          </div>
+
+          <div class="game-workspace">
+
+            <section class="game-actions-panel">
+              <h3>DAILY PLANNING</h3>
+
+              <div id="daily-action-list">
+
+                <label class="action-option">
+                  <input type="checkbox" id="action-oxygen" />
+                  <span>
+                    <strong>Oxygen Maker</strong>
+                    <small>20 power · +15 oxygen</small>
+                  </span>
+                </label>
+
+                <label class="action-option">
+                  <input type="checkbox" id="action-exercise" />
+                  <span>
+                    <strong>Exercise Machine</strong>
+                    <small>10 power · Protects crew health</small>
+                  </span>
+                </label>
+
+                <label class="action-option">
+                  <input type="checkbox" id="action-science" />
+                  <span>
+                    <strong>Science Mission</strong>
+                    <small>15 power · Research points</small>
+                  </span>
+                </label>
+
+              </div>
+
+              <div class="shield-selection">
+                <label for="shield-setting">
+                  Radiation Shielding
+                </label>
+
+                <select id="shield-setting">
+                  <option value="off">Off — 0 power</option>
+                  <option value="low">Low — 10 power</option>
+                  <option value="high">High — 25 power</option>
+                </select>
+              </div>
+
+              <div class="planning-summary">
+                <span>Total power cost</span>
+                <strong id="planned-power-cost">0</strong>
+              </div>
+
+              <button
+                class="button button-primary"
+                id="end-day"
+                type="button"
+              >
+                Confirm Plan & End Day
+              </button>
+
+              <p id="planning-message" role="status"></p>
+            </section>
+
+            <section class="game-log-panel">
+              <h3>MISSION LOG</h3>
+              <div id="mission-log" aria-live="polite">
+                <p>Mission initialized. Awaiting first daily plan.</p>
+              </div>
+            </section>
+
+          </div>
+
+        </div>
+
+        <div
+          class="mission-report"
+          id="mission-report"
+          hidden
+          aria-live="polite"
+        >
+          <h3 id="report-title">MISSION DEBRIEF</h3>
+          <div id="report-content"></div>
+
+          <button
+            class="button button-primary"
+            id="play-again"
+            type="button"
+          >
+            Play Again
+          </button>
+        </div>
+
+      </section>
+
+
+      <!-- MISSION CONTROL -->
+
+      <section
+        class="page-section content-section"
+        id="mission-control"
+        aria-labelledby="control-title"
+      >
+        <div class="section-heading">
+          <span class="section-kicker">05 / OPERATIONS</span>
+
+          <h2 id="control-title">
+            MISSION
+            <span>CONTROL.</span>
+          </h2>
+
+          <p>
+            Monitor mission progress and review the crew's
+            resource status.
+          </p>
+        </div>
+
+        <div class="control-panel">
+
+          <div class="control-item">
+            <span>MISSION STATUS</span>
+            <strong id="control-status">NOT STARTED</strong>
+          </div>
+
+          <div class="control-item">
+            <span>CURRENT DAY</span>
+            <strong id="control-day">-- / 30</strong>
+          </div>
+
+          <div class="control-item">
+            <span>MISSION MODE</span>
+            <strong id="control-mode">--</strong>
+          </div>
+
+          <div class="control-item">
+            <span>SCIENCE SCORE</span>
+            <strong id="control-science">0</strong>
+          </div>
+
+        </div>
+
+        <div class="control-log">
+          <h3>MISSION CONTROL MESSAGES</h3>
+          <div id="control-messages">
+            <p>Awaiting mission initialization.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- SETTINGS -->
+
+      <section
+        class="page-section content-section settings-section"
+        id="settings"
+        aria-labelledby="settings-title"
+      >
+        <div class="section-heading">
+          <span class="section-kicker">06 / PREFERENCES</span>
+
+          <h2 id="settings-title">
+            MISSION
+            <span>SETTINGS.</span>
+          </h2>
+
+          <p>
+            Customize your mission experience.
+          </p>
+        </div>
+
+        <div class="settings-panel">
+
+          <label class="setting-row">
+            <span>
+              <strong>Sound Effects</strong>
+              <small>Optional mission interface sounds</small>
+            </span>
+
+            <input
+              type="checkbox"
+              id="sound-setting"
+              aria-label="Enable sound effects"
+            />
+          </label>
+
+          <label class="setting-row">
+            <span>
+              <strong>Reduced Motion</strong>
+              <small>Reduce interface animations</small>
+            </span>
+
+            <input
+              type="checkbox"
+              id="motion-setting"
+              aria-label="Enable reduced motion"
+            />
+          </label>
+
+          <label class="setting-row">
+            <span>
+              <strong>3D Graphics</strong>
+              <small>Enable the interactive colony scene when supported</small>
+            </span>
+
+            <input
+              type="checkbox"
+              id="graphics-setting"
+              checked
+              aria-label="Enable 3D graphics"
+            />
+          </label>
+
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- HOW TO PLAY DIALOG -->
+
+    <dialog
+      class="information-dialog"
+      id="how-to-play-dialog"
+      aria-labelledby="how-to-play-title"
+    >
+      <div class="dialog-content">
+        <button
+          class="dialog-close"
+          type="button"
+          data-close-dialog
+          aria-label="Close instructions"
+        >
+          ×
+        </button>
+
+        <span class="section-kicker">MISSION MANUAL</span>
+        <h2 id="how-to-play-title">HOW TO PLAY</h2>
+
+        <p>
+          Manage power, oxygen, radiation shielding,
+          exercise and science missions every day.
+        </p>
+
+        <p>
+          The crew must survive all 30 days.
+          If oxygen or health reaches zero, the mission ends.
+        </p>
+
+        <p>
+          You earn stars for surviving and maintaining
+          crew health and scientific progress.
+        </p>
+      </div>
+    </dialog>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+      <div class="footer-brand">
+        <strong>STORM WATCH</strong>
+        <span>JEZERO OUTPOST</span>
+      </div>
+
+      <p class="footer-attribution">
+        Space weather: NASA DONKI (CCMC).
+        Radiation: NASA OSDR RadLab, ISS DosTel instruments.
+        Space biology: NASA Open Science Data Repository
+        (OSD-477, OSD-471, OSD-351, OSD-653, OSD-486).
+      </p>
+
+      <p class="footer-disclaimer">
+        Archived snapshot, not live.
+        Studies used mice and rats.
+        Game numbers (power, oxygen, effects) are simplified for learning.
+      </p>
+
+      <div class="footer-bottom">
+        <span>STORM WATCH — JEZERO OUTPOST</span>
+        <span>EDUCATIONAL MARS SURVIVAL EXPERIENCE</span>
+      </div>
+
+    </footer>
+
+  </div>
+</body>
+</html>
