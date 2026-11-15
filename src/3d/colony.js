@@ -1,8 +1,7 @@
 
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import { createMarsTextures } from "../assets/textures/marsTextures.js";
-
+import { createMarsTextures } from "../assets/Textures/marsTextures.js";
 export function createMarsColony() {
   const container = document.getElementById("colony-canvas");
 
